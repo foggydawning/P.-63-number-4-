@@ -6,10 +6,13 @@ def add_random_list (list_=[]):
 
 def poisk (list, max=1):
     for i in range (0, len(list)-1):
-        print(i,max)
         k=1
         while i+k < len (list) and list[i]==list[i+k]:
             k+=1
         if max<k:
             max=k
     return max
+
+list=add_random_list()
+print(list)
+print(poisk(list))
